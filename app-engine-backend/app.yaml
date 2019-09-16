@@ -17,14 +17,8 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /
-  static_files: static/index.html
-  upload: static/index\.html
-  secure: always
-
-- url: /
-  static_dir: static
-  secure: always
+- url: /.*
+  script: main.app
 
 skip_files:
 - ^(.*/)?app\.yaml
